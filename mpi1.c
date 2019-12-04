@@ -10,7 +10,7 @@ int Root = 0, temp = 1;
 char Message[BUFFER_SIZE];
 MPI_Init(&argc,&argv);
 MPI_Status status;
-MPI_Comm_rank(MPI_COMM _WORLD,&MyRank);
+MPI_Comm_rank(MPI_COMM_WORLD,&MyRank);
 MPI_Comm_size(MPI_COMM_WORLD,&Numprocs);
 if (MyRank == 0)
 {
