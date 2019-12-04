@@ -44,7 +44,6 @@ for (i=2;i<=N;i++)
 if( a[i] )
 {
 pcount++;
-//printf("%d\n",i);
 }
 }
 printf("%d primes between 0 and %d\n",pcount,N);
