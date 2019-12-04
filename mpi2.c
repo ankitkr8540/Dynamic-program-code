@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<mpi.h>
-int main( int argc, char *
+int main( int argc, char *argv[])
 {
 int iproc;
 int MyRank, Numprocs, Root = 0;
@@ -20,7 +20,7 @@ Source_tag = 0;
 MPI_Recv(&value, 1, MPI_INT, Source, Source_tag,MPI_COMM_WORLD, &status);
 sum = sum + value;
 }
-printf(printf("MyRank = %d, SUM = %d n"n", MyRank,sum);
+printf("MyRank = %d, SUM = %d \n", MyRank,sum);
 }
 else
 {
