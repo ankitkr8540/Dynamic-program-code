@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<mpi.h>
 void main( int argc, char *argv[])
+{
 int rank,size;
 double param[6],mine;
 int sndcnt,rcvcnt;
@@ -14,7 +15,6 @@ if (rank==3) rcvcnt= 1;
 MPI_Gather(&mine,sndcnt,MPI_DOUBLE,param,rcvcnt,MPI_DOUBLE,3,MPI_COMM_WORLD);
 if (rank==3)
 for (i=0;i<size;++i)
-//printf("PE:%d param[%d] is %f n",rank,i,param[i]]);
 printf(" %d %d \n",rank,i);
 MPI_Finalize();
 }
