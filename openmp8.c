@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <omp.h>
 #define N 100000000
 #define TRUE 1
@@ -37,7 +38,7 @@ if (a[i]){ k = i; found = TRUE; }
 }
 }
 t2 = omp_get_wtime();
-printf("%.2f seconds\n",t2 t1);
+printf("%.2f seconds\n",t2-t1);
 pcount = 0;
 for (i=2;i<=N;i++)
 {
